@@ -1,190 +1,47 @@
-@font-face {
-    font-family: apple;
-    src: url(./SFPRODISPLAYREGULAR.OTF);
-}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: apple;
 }
 html,body{
     width: 100%;
     height: 100%;
 }
-#main{
+
+.parent{
     height: 100%;
     width: 100%;
-    background-color: black;
-}
-nav{
-    background-color:#161617;
-    height: 42px;
+    background-color:black;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-}
-nav h4{
-    font-size: 12px;
-    font-weight: 500;
-    color: white;
-}
-.quite{
-    font-size: 15px;
-}
-section{
-    margin-top: 50px;
-    color: white;
-    height: 75%;
-    width: 100%;
-    text-align: center;
-    font-size: 25px;
-}
+    overflow: auto;
+    flex-wrap: nowrap;
 
-.buttons button{
-    color: white;
-    margin: 20px 10px;
-    padding: 12px 22px;
-    font-size: 18px;
-    font-weight: 300px;
-    border-radius: 30px;
 }
-.buttons #b1{
-    border: none;
-    background-color: royalblue;
-}
-.buttons #b2{
-    color: royalblue;
-    background-color: black;
-    border: 1.5px solid royalblue;
-}
-.buttons #b2:hover{
-    color: white;
-    background-color: royalblue;
-}
-#iphoneimg{
-    background-image: url(https://www.apple.com/v/home/ch/images/heroes/iphone-17-pro/hero_iphone_17_pro__bknyzxfk2agi_mediumtall.jpg);
-    background-position:bottom;
-    background-repeat: no-repeat;
-    background-size: 80%;
-    height:462px;
-    width: 100%;
-}
-
-article{
-    height: 100%;
-    width: 100%;
-    background-color: white;
-}
-article #iphoneair{
-    background-image: url(https://www.apple.com/v/home/ch/images/heroes/iphone-air/hero_iphone_air__0gxyavihpiqu_large.jpg);
-    height: 600px;
-    width: 100%;
+.child1{
+    height: 200px;
+    width: 200px;
+    background-image: url(https://images.unsplash.com/photo-1719715658935-6de9cbda71bb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D);
     background-size: cover;
     background-position: center;
-}
+    flex-shrink: 0;
 
-#card1{
-    height:400px;
-    width: 100%;
-    text-align: center;
 }
-#card1 h1{
-    padding-top: 20px;
-    font-size: 52px;
-    font-weight: 600;
-}
-#card1 h3{
-    font-size: 25px;
-    font-weight: 100;   
-}
-.buttons #b21:hover{
-    color: white;
-    background-color: royalblue;
-}
-.buttons #b21{
-    color: royalblue;
-    background-color: white;
-    border: 1.5px solid royalblue;
-}
-
-article #iphone17{
-    background-image: url(https://www.apple.com/v/home/ch/images/heroes/iphone-17/hero_iphone_17__c5vvimu9a20y_mediumtall.jpg);
-    height: 600px;
-    width: 100%;
-    background-position: center;
+.child2{
+    height: 200px;
+    width: 200px;
+    background-image: url(https://media.istockphoto.com/id/2178615704/photo/couple-of-friends-enjoy-the-fair-in-their-town.webp?a=1&s=612x612&w=0&k=20&c=UaYRoo5x6VNKmu7377JtgwyileA3tNpofwM9iJemRQI=);
     background-size: cover;
-}
-
-#card2{
-    height:400px;
-    width: 100%;
-    text-align: center;
-}
-#card2 h1{
-    padding-top: 20px;
-    font-size: 52px;
-    font-weight: 600;
-}
-#card2 h3{
-    font-size: 25px;
-    font-weight: 100;   
-}
-#bigbox{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: top;
-    justify-content: center;
-    background-color: white;
-}
-.box{
-    height: 400px;
-    width: 800px;
-    background-color: white;
-    margin: 10px 10px;
-    padding: 5px;
-}
-#applewatch h3{
-    font-weight: 200;
-}
+    background-position: center;
+    flex-shrink: 0;
     
-span{
-    font-weight: 700;
 }
-#applewatch h2{
-    font-size: 30px;
-    font-weight: 550;
-}
-
-#applewatch{
-    padding: 40px;
-    text-align: center;
-    height: 500px;
-    width: 700px;
-    background-image: url(https://www.apple.com/v/home/ch/images/promos/apple-watch-series-11/promo_apple_watch_series_11__b63hxviqvonm_medium.jpg);
-    background-position: center;
-    background-size: cover;
-}
-
-#airpods h2{
-    padding-top: 50px;
-    font-size: 40px;
-    font-weight: 600;
-}
-#airpods h3{
-    text-align: center;
-    font-weight: 200;
-}
-
-#airpods{
-    padding: 40px;
-    text-align: center;
-    background-image: url(https://www.apple.com/v/home/ch/images/promos/airpods-pro-3/promo_airpodspro_3__f6xmza7bglei_medium.jpg);
+.child3{
+    height: 200px;
+    width: 200px;
+    background-image: url(https://images.unsplash.com/photo-1759841532628-4a66cd605d62?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDV8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D);
     background-size: cover;
     background-position: center;
-    height: 500px;
-    width: 700px;
+    flex-shrink: 0;
     
 }
