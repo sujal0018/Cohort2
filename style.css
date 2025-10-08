@@ -1,69 +1,190 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=SUSE:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: apple;
+    src: url(./SFPRODISPLAYREGULAR.OTF);
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    font-family: apple;
 }
 html,body{
-    font-family: "Poppins", sans-serif;
-    height: 100%;
     width: 100%;
-}
-section{
-    background-color: whitesmoke;
-}
-section h1{
-    text-align: center;
-    font-size: 100px;
-    color: rgb(249, 197, 206);
-    font-weight: 400;
+    height: 100%;
 }
 #main{
-    width: 100%;
     height: 100%;
-    background-color: pink;
-    padding: 40px 40px;
-    display: flex;
-    gap: 100px;
-    justify-content: space-evenly;
+    width: 100%;
+    background-color: black;
 }
-
-.class{
-    border-radius: 15px;
-    background-color:whitesmoke;
-    width: 300px;
-    height: 350px;
-    padding: 20px;
+nav{
+    background-color:#161617;
+    height: 42px;
     display: flex;
     align-items: center;
-    justify-content:space-evenly;
-    flex-direction: column;
-    box-shadow: 20px 20px 18px rgba(244, 121, 142, 0.723);
+    justify-content: center;
+    gap: 40px;
 }
-.class img{
-    object-fit: cover;
-    height: 150px;
-    width: 150px;
-    border-radius: 40px;
-}
-.class h2{
-    font-weight: 200;
-    text-align: center;
-}
-.class p{
-    font-weight: 200;
-    text-align: center;
-}
-.class button{
-    background-color: rgb(249, 197, 206);
-    padding: 10px 20px;
-    border-radius: 40px;
+nav h4{
+    font-size: 12px;
+    font-weight: 500;
     color: white;
-    border: none;
-    cursor: pointer;
 }
-button:hover{
-    background-color: whitesmoke;
-    color:rgb(249, 197, 206);
+.quite{
+    font-size: 15px;
+}
+section{
+    margin-top: 50px;
+    color: white;
+    height: 75%;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+
+.buttons button{
+    color: white;
+    margin: 20px 10px;
+    padding: 12px 22px;
+    font-size: 18px;
+    font-weight: 300px;
+    border-radius: 30px;
+}
+.buttons #b1{
+    border: none;
+    background-color: royalblue;
+}
+.buttons #b2{
+    color: royalblue;
+    background-color: black;
+    border: 1.5px solid royalblue;
+}
+.buttons #b2:hover{
+    color: white;
+    background-color: royalblue;
+}
+#iphoneimg{
+    background-image: url(https://www.apple.com/v/home/ch/images/heroes/iphone-17-pro/hero_iphone_17_pro__bknyzxfk2agi_mediumtall.jpg);
+    background-position:bottom;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    height:462px;
+    width: 100%;
+}
+
+article{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+article #iphoneair{
+    background-image: url(https://www.apple.com/v/home/ch/images/heroes/iphone-air/hero_iphone_air__0gxyavihpiqu_large.jpg);
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+#card1{
+    height:400px;
+    width: 100%;
+    text-align: center;
+}
+#card1 h1{
+    padding-top: 20px;
+    font-size: 52px;
+    font-weight: 600;
+}
+#card1 h3{
+    font-size: 25px;
+    font-weight: 100;   
+}
+.buttons #b21:hover{
+    color: white;
+    background-color: royalblue;
+}
+.buttons #b21{
+    color: royalblue;
+    background-color: white;
+    border: 1.5px solid royalblue;
+}
+
+article #iphone17{
+    background-image: url(https://www.apple.com/v/home/ch/images/heroes/iphone-17/hero_iphone_17__c5vvimu9a20y_mediumtall.jpg);
+    height: 600px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+#card2{
+    height:400px;
+    width: 100%;
+    text-align: center;
+}
+#card2 h1{
+    padding-top: 20px;
+    font-size: 52px;
+    font-weight: 600;
+}
+#card2 h3{
+    font-size: 25px;
+    font-weight: 100;   
+}
+#bigbox{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    background-color: white;
+}
+.box{
+    height: 400px;
+    width: 800px;
+    background-color: white;
+    margin: 10px 10px;
+    padding: 5px;
+}
+#applewatch h3{
+    font-weight: 200;
+}
+    
+span{
+    font-weight: 700;
+}
+#applewatch h2{
+    font-size: 30px;
+    font-weight: 550;
+}
+
+#applewatch{
+    padding: 40px;
+    text-align: center;
+    height: 500px;
+    width: 700px;
+    background-image: url(https://www.apple.com/v/home/ch/images/promos/apple-watch-series-11/promo_apple_watch_series_11__b63hxviqvonm_medium.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#airpods h2{
+    padding-top: 50px;
+    font-size: 40px;
+    font-weight: 600;
+}
+#airpods h3{
+    text-align: center;
+    font-weight: 200;
+}
+
+#airpods{
+    padding: 40px;
+    text-align: center;
+    background-image: url(https://www.apple.com/v/home/ch/images/promos/airpods-pro-3/promo_airpodspro_3__f6xmza7bglei_medium.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 700px;
+    
 }
