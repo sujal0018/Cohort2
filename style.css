@@ -14,20 +14,13 @@ html {
 	padding: 20px;
 }
 
-h1 {
-    color: blanchedalmond;
-	text-align: center;
-	font-size: 100px;
+h1{
+    text-align: center;
+    font-size: 200px;
+    color: rgb(191, 215, 147);
 }
-.clicks{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-button {
-	background-color: rgb(209, 230, 183);
-	color: black;
-    
-	padding: 20px;
-	border-radius: 20px;
+h2{
+    text-align: center;
+    font-size: 100px;
+    color: rgb(245, 234, 205);
 }
