@@ -1,118 +1,12 @@
 let main = document.querySelector("main");
-let button = document.querySelector("button");
-const quotes = [
-	"Believe you can and you're halfway there.",
-	"Dream big and dare to fail.",
-	"Success is not final; failure is not fatal.",
-	"Turn your wounds into wisdom.",
-	"What we think, we become.",
-	"The best way out is always through.",
-	"Act as if what you do makes a difference.",
-	"You are stronger than you think.",
-	"Everything you can imagine is real.",
-	"Do what you can, with what you have.",
-	"Be the change that you wish to see in the world.",
-	"Happiness depends upon ourselves.",
-	"Doubt kills more dreams than failure ever will.",
-	"The future depends on what you do today.",
-	"Every moment is a fresh beginning.",
-	"Simplicity is the ultimate sophistication.",
-	"You miss 100% of the shots you don’t take.",
-	"If you're going through hell, keep going.",
-	"Believe in yourself and all that you are.",
-	"Well begun is half done.",
-	"Turn obstacles into opportunities.",
-	"In the middle of difficulty lies opportunity.",
-	"The best time for new beginnings is now.",
-	"Do something today your future self will thank you for.",
-	"Dreams don’t work unless you do.",
-	"Don’t wait for opportunity. Create it.",
-	"You become what you believe.",
-	"Start where you are. Use what you have.",
-	"Change the world by being yourself.",
-	"Fall seven times, stand up eight.",
-	"With the new day comes new strength.",
-	"The secret of getting ahead is getting started.",
-	"Push yourself, no one else is going to do it for you.",
-	"Your only limit is your mind.",
-	"Prove them wrong.",
-	"Great things never come from comfort zones.",
-	"Success doesn’t come to you; you go to it.",
-	"Don’t stop until you’re proud.",
-	"Big journeys begin with small steps.",
-	"Your vibe attracts your tribe.",
-	"Good things take time.",
-	"You are enough.",
-	"Progress, not perfection.",
-	"Focus on the good.",
-	"Little things make big days.",
-	"Difficult roads lead to beautiful destinations.",
-	"Make each day your masterpiece.",
-	"If not now, when?",
-	"Stay hungry. Stay foolish.",
-	"You’re doing great.",
-	"Chase the vision, not the money.",
-	"Keep going. You're getting there.",
-	"Do it with passion or not at all.",
-	"Believe in miracles.",
-	"Grow through what you go through.",
-	"Stay positive, work hard, make it happen.",
-	"Success is built on persistence.",
-	"One step at a time.",
-	"Everything is figureoutable.",
-	"Never regret being kind.",
-	"Work hard in silence, let success make the noise.",
-	"Mistakes are proof that you're trying.",
-	"The best is yet to come.",
-	"Trust the process.",
-	"Focus on your goals.",
-	"The journey is the reward.",
-	"Good things are coming.",
-	"You can and you will.",
-	"Every day is a second chance.",
-	"You are your only limit.",
-	"Do it scared.",
-	"Your dreams are valid.",
-	"Don’t quit before the miracle.",
-	"Consistency creates results.",
-	"Slow progress is still progress.",
-	"Win the day.",
-	"Small steps every day.",
-	"Don’t be afraid to start over.",
-	"Better an oops than a what if.",
-	"Stay humble, hustle hard.",
-	"You’re capable of amazing things.",
-	"Never stop learning.",
-	"Stars can’t shine without darkness.",
-	"Keep moving forward.",
-	"Make it happen.",
-	"Do what makes you happy.",
-	"Be yourself; everyone else is taken.",
-	"Your potential is endless.",
-	"Strive for progress.",
-	"Everything happens for a reason.",
-	"Don’t look back; you’re not going that way.",
-	"Success is a series of small efforts.",
-	"Focus on the step in front of you.",
-	"Believe. Act. Achieve.",
-	"It's okay to rest, not to quit.",
-	"You grow by doing hard things.",
-	"Stay focused and never give up.",
-	"Rise by lifting others.",
-	"You’re closer than you think.",
-];
-button.addEventListener("click", function () {
-    let x = Math.floor(Math.random() * 100);
-    let oldH1 = document.querySelector("main h1");
-	if (oldH1 === null) {
-		let h1 = document.createElement("h1");
-		h1.innerHTML = quotes[x];
-		main.appendChild(h1);
-		h1.style.position = "absolute";
-		h1.style.fontSize = "50px";
-        h1.style.top = 35 + "%";
-        
+let btn = document.querySelector('button');
+
+btn.addEventListener("click", function () {
+    main.classList.toggle("dark");
+
+    if (main.classList.contains("dark")) {
+        btn.textContent = "Light Mode";
     } else {
-        oldH1.remove();
+        btn.textContent = "Dark Mode";
     }
 });
