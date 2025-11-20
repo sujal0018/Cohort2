@@ -1,22 +1,15 @@
-let button = document.querySelector("button");
-let inner = document.querySelector(".inner");
-let h2 = document.querySelector("h2");
-let grow = 0;
-let card = document.querySelector(".card");
-button.addEventListener("click", function () {
-    button.style.pointerEvents = "none";
-    button.innerHTML = "downloading";
-	let a = setInterval(() => {
-		grow++;
-		h2.innerHTML = grow + "%";
-		inner.style.width = grow + "%";
-	}, 50);
-	setTimeout(() => {
-        clearInterval(a);
-        button.innerHTML = "downloaded";
-        button.style.opacity = 0.5;
-		let h3 = document.createElement("h3");
-		h3.innerHTML = "Download complete";
-		card.appendChild(h3);
-	}, 5000);
-});
+let img=document.querySelector('img')
+let i = document.querySelector('i')
+img.addEventListener('dblclick', function () {
+    i.style.opacity = 1;
+    i.style.transform = 'translate(-50%,-50%) scale(1) rotate(0deg)';
+    setTimeout(() => {
+        i.style.transform = 'translate(-50%,-300%) scale(1) rotate(60deg)';
+    }, 800);
+    setTimeout(() => {
+        i.style.opacity = 0;
+    }, 1000);
+    setTimeout(() => {
+       i.style.transform = 'translate(-50%,-50%) scale(0) rotate(0deg)';
+    }, 1000);
+})
