@@ -1,15 +1,14 @@
-let img=document.querySelector('img')
-let i = document.querySelector('i')
-img.addEventListener('dblclick', function () {
-    i.style.opacity = 1;
-    i.style.transform = 'translate(-50%,-50%) scale(1) rotate(0deg)';
-    setTimeout(() => {
-        i.style.transform = 'translate(-50%,-300%) scale(1) rotate(60deg)';
-    }, 800);
-    setTimeout(() => {
-        i.style.opacity = 0;
-    }, 1000);
-    setTimeout(() => {
-       i.style.transform = 'translate(-50%,-50%) scale(0) rotate(0deg)';
-    }, 1000);
+let elem = document.querySelectorAll('.elem')
+elem.forEach(function (val) {
+
+    val.addEventListener('mouseenter', function () {
+       val.childNodes[3].style.opacity=1
+    })
+    val.addEventListener('mouseleave', function () {
+        val.childNodes[3].style.opacity=0
+    })
+    val.addEventListener('mousemove', function (dets) {
+        val.childNodes[3].style.left=dets.x+'px'
+        val.childNodes[3].style.top=dets.y+'px'
+    })
 })
