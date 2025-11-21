@@ -1,42 +1,49 @@
-let arr = [
+let users = [
   {
-    dp: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=1974&auto=format&fit=crop",
-    story: "https://images.unsplash.com/photo-1495567720989-cebdbdd97913?q=80&w=1200&auto=format&fit=crop"
+    username: "AaravSharma",
+    image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&auto=format&fit=crop",
+    profession: "Frontend Developer",
+    description: "Passionate about building responsive UI and creating smooth user experiences."
   },
   {
-    dp: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop",
-    story: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop"
+    username: "SanyaP",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&auto=format&fit=crop",
+    profession: "Graphic Designer",
+    description: "Loves designing clean, minimal, and modern brand identities."
   },
   {
-    dp: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1974&auto=format&fit=crop",
-    story: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop"
+    username: "RohanV",
+    image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&auto=format&fit=crop",
+    profession: "Data Analyst",
+    description: "Enjoys discovering patterns and insights from large datasets."
   },
   {
-    dp: "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?q=80&w=1974&auto=format&fit=crop",
-    story: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1200&auto=format&fit=crop"
+    username: "MeeraK",
+    image: "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?q=80&auto=format&fit=crop",
+    profession: "Content Writer",
+    description: "Writes engaging, SEO-friendly content for blogs and digital platforms."
   },
   {
-    dp: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1974&auto=format&fit=crop",
-    story: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=1200&auto=format&fit=crop"
+    username: "KabirS",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&auto=format&fit=crop",
+    profession: "Photographer",
+    description: "Captures portraits and lifestyle photos with a cinematic touch."
   },
   {
-    dp: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=1974&auto=format&fit=crop",
-    story: "https://images.unsplash.com/photo-1506086679525-9d1975332d88?q=80&w=1200&auto=format&fit=crop"
+    username: "IshitaD",
+    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&auto=format&fit=crop",
+    profession: "UI/UX Designer",
+    description: "Creates intuitive designs and focuses on user-centric product flows."
   }
 ];
-let clutter=''
-arr.forEach(function (elem,idx) {
-    clutter+=`<div class="story">
-                <img  id="${idx}" src="${elem.dp}" alt="">
+let main = document.querySelector('main')
+let sum = ''
+users.forEach(function (elem) {
+    sum += `<div class="card">
+                <img src="${elem.image}" alt="">
+                <h1>${elem.username}</h1>
+                <h2>${elem.profession}</h2>
+                <p>${elem.description}</p>
             </div>`
 })
-let stories = document.querySelector('.stories')
-let fullscreen = document.querySelector('.fullscreen')
-stories.innerHTML = clutter
-stories.addEventListener('click', function (dets) {
-    fullscreen.style.display= "block " 
-    fullscreen.style.backgroundImage=`url(${arr[dets.target.id].story})`
-    setTimeout(() => {
-        fullscreen.style.display= "none " 
-    }, 3000);
-})
+main.innerHTML=sum
