@@ -12,38 +12,58 @@ body {
 		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
 		sans-serif;
 }
-main {
-	height: 100%;
-	width: 100%;
-	background-color: #030303;
-	position: relative;
-}
-
-.elem {
-	height: 100px;
-	width: 100%;
-	background-color: rgb(53, 53, 53);
-	border-bottom: 3px solid rgb(160, 160, 160);
+body {
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
+	justify-content: center;
+	background-color: #3f3f3f;
 }
-
-.elem h1 {
-	font-size: 4vw;
-    mix-blend-mode: difference;
+.card {
+	height: 480px;
+	width: 300px;
+	background-color: #d2d2d2;
+	border-radius: 10px;
+	border: 3px solid black;
     position: relative;
-    z-index: 9;
+    overflow: hidden;
+}
+.stories {
+	height: 100px;
+	width: 100%;
+	border-bottom: 1px solid black;
+	padding: 15px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
-.elem img {
-	width:150px;
-	height: 150px;
+.stories::-webkit-scrollbar{
+    display: none;
+    transition: all ease 0.2s;
+}
+.story {
+	height: 70px;
+	width: 70px;
+	border-radius: 50%;
+	background: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);
+    padding: 2px;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 5px;
+}
+.story img {
 	object-fit: cover;
-	object-position: center;
+	height: 100%;
+	width: 100%;
+    object-position: center;
     border-radius: 50%;
-    opacity: 0;
+}
+.fullscreen{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
     position: absolute;
-    transform: translate(-50%,-50%);
-    transition: all linear 0.3s;
+    display: none;
+
 }
