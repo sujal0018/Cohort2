@@ -1,49 +1,89 @@
-let users = [
-  {
-    username: "AaravSharma",
-    image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&auto=format&fit=crop",
-    profession: "Frontend Developer",
-    description: "Passionate about building responsive UI and creating smooth user experiences."
+let jobs = [
+    {
+    logo:'./amazon.png',
+    company: "Amazon",
+    posted: "5 days ago",
+    role: "Senior UI/UX Designer",
+    tags: ["Part-Time", "Senior Level"],
+    pay: "$120/hr",
+    location: "Mumbai, India",
+    saved: false
   },
-  {
-    username: "SanyaP",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&auto=format&fit=crop",
-    profession: "Graphic Designer",
-    description: "Loves designing clean, minimal, and modern brand identities."
+    {
+      logo:'./google.png',
+    company: "Google",
+    posted: "30 days ago",
+    role: "Graphic Designer",
+    tags: ["Part-Time", "Flexible Schedule"],
+    pay: "$150–220k",
+    location: "Kochi, India",
+    saved: true
   },
-  {
-    username: "RohanV",
-    image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&auto=format&fit=crop",
-    profession: "Data Analyst",
-    description: "Enjoys discovering patterns and insights from large datasets."
+    {
+      logo:'./dribble.png',
+    company: "Dribbble",
+    posted: "18 days ago",
+    role: "Senior Motion Designer",
+    tags: ["Contract", "Remote"],
+    pay: "$85/hr",
+    location: "Chennai, India",
+    saved: false
   },
-  {
-    username: "MeeraK",
-    image: "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?q=80&auto=format&fit=crop",
-    profession: "Content Writer",
-    description: "Writes engaging, SEO-friendly content for blogs and digital platforms."
+  {logo:'./figma.png',
+    company: "Figma",
+    posted: "5 days ago",
+    role: "UX Designer",
+    tags: ["Full-Time", "In office"],
+    pay: "$200–250k",
+    location: "Bangalore, India",
+    saved: true
   },
-  {
-    username: "KabirS",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&auto=format&fit=crop",
-    profession: "Photographer",
-    description: "Captures portraits and lifestyle photos with a cinematic touch."
+  {logo:'./airbnb.png',
+    company: "Airbnb",
+    posted: "5 days ago",
+    role: "Junior UI/UX Designer",
+    tags: ["Contract", "Remote"],
+    pay: "$100/hr",
+    location: "Delhi, India",
+    saved: false
   },
-  {
-    username: "IshitaD",
-    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&auto=format&fit=crop",
-    profession: "UI/UX Designer",
-    description: "Creates intuitive designs and focuses on user-centric product flows."
+  {logo:'./apple.png',
+    company: "Apple",
+    posted: "5 days ago",
+    role: "Graphic Designer",
+    tags: ["Full-Time", "Flexible Schedule"],
+    pay: "$85–120k",
+    location: "Kerala, India",
+    saved: true
   }
 ];
-let main = document.querySelector('main')
-let sum = ''
-users.forEach(function (elem) {
+let main=document.querySelector('main')
+let sum = '';
+jobs.forEach(function (elem) {
+    let saveIcon = elem.saved 
+        ? `<i class="ri-bookmark-fill"></i>` 
+        : `<i class="ri-bookmark-line"></i>`;
     sum += `<div class="card">
-                <img src="${elem.image}" alt="">
-                <h1>${elem.username}</h1>
-                <h2>${elem.profession}</h2>
-                <p>${elem.description}</p>
-            </div>`
+				<div class="top">
+					<img src="${elem.logo}" alt="" />
+					<h2>${elem.saved ? 'Saved' : 'Save'} ${saveIcon}</h2>
+				</div>
+				<div class="mid">
+					<h2>${elem.company}<span> 5days ago</span></h2>
+					<h1>${elem.role}</h1>
+					<div class="role">
+						<h2>${elem.tags[0]}</h2>
+						<h2>${elem.tags[1]}</h2>
+					</div>
+				</div>
+
+				<div class="bottom">
+					<div class="pay-loc">
+						<h2>${elem.pay}</h2>
+						<h3>${elem.location}</h3>
+					</div>
+					<button>Apply Now</button>
+				</div>
+			</div>`
 })
-main.innerHTML=sum
+main.innerHTML = sum;
